@@ -4,10 +4,29 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta property="og:title" content="PM 김르탄">
-    <meta property="og:description" content="프로덕트매니저 김르탄입니다.">
-    <meta property="og:image" content="https://s3.ap-northeast-2.amazonaws.com/materials.spartacodingclub.kr/free_myprofile/%EB%A5%B4%ED%83%84+%EC%98%A4%EB%A6%AC%EC%A7%80%EB%84%90/%EB%A5%B4%ED%83%84%EC%98%A4%EB%A6%AC%EC%A7%80%EB%84%90%ED%94%84%EB%A1%9C%ED%95%84.png">
-    <title>PM 김르탄</title>
+    <meta property="og:title" content="forntend developer 최지은">
+    <meta property="og:description" content="주니어 프론트엔드 개발자 최지은입니다.">
+    <meta property="og:image" content="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2Fb6IpBU%2FbtrMlj7lNoU%2FumuYWaReYvdEyWojFimfE0%2Fimg.png">
+    <link rel="shortcut icon" href="/img/favi/favicon.ico"> <!--추가-->
+    <link rel="apple-touch-icon" sizes="57x57" href="/img/favi/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/img/favi/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/img/favi/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/img/favi/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/img/favi/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/img/favi/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/img/favi/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/img/favi/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/img/favi/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="/img/favi/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/img/favi/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/img/favi/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/img/favi/favicon-16x16.png">
+    <link rel="manifest" href="/img/favi/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/img/favi/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <title>프론트엔드 개발자 최지은</title>
     <style>
         @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
         * {
@@ -26,7 +45,7 @@
             width: 58px;
             height: 58px;
             border-radius: 100%;
-            border: 1px solid black;
+            border: none;
             background-image: url('https://avatars.githubusercontent.com/u/96626020?v=4');
             background-position: center;
             background-size: cover;
@@ -54,7 +73,8 @@
         .minis {
             display: flex;
             flex-direction: row;
-            justify-content: center;
+            flex-wrap: wrap;
+            justify-content: flex-start;
             align-items: center;
             padding: 0px;
             gap: 7px;
@@ -72,16 +92,36 @@
             white-space:pre-wrap;
         }
         .tistory {
-            background: linear-gradient(287.96deg, rgba(0, 0, 0, 0.16) 15.1%, rgba(0, 0, 0, 0) 83.32%), #F7F6F3;
-            color:#84827D;
+            background: linear-gradient(287.96deg, rgba(0, 0, 0, 0.16) 15.1%, rgba(0, 0, 0, 0) 83.32%), #b7b7b7;
+            color:#FFFFFF;
+        }
+        .tistory:hover {
+            transform: scale(0.98);
         }
         .github {
             background: linear-gradient(287.96deg, rgba(0, 0, 0, 0.16) 15.1%, rgba(0, 0, 0, 0) 83.32%), #02C3BD;
             color:#FFFFFF;
         }
-        .instagram {
+        .github:hover {
+            transform: scale(0.98);
+        }
+        .rocket {
             background: linear-gradient(287.96deg, rgba(0, 0, 0, 0.16) 15.1%, rgba(0, 0, 0, 0) 83.32%), #4167B3;
             color:#FFFFFF;
+        }
+        .rocket:hover {
+            transform: scale(0.98);
+        }
+        .instagram {
+            background: linear-gradient(287.96deg, rgba(0, 0, 0, 0.16) 15.1%, rgba(0, 0, 0, 0) 83.32%), #bd38b9;
+            color:#FFFFFF;
+        }
+        .instagram:hover{
+            transform: scale(0.98);
+        }
+        .contect {
+            background: linear-gradient(287.96deg, rgba(0, 0, 0, 0.16) 15.1%, rgba(0, 0, 0, 0) 83.32%), #fec871;
+            color:#FFFFFF; 
         }
         .wrap {
             width: 320px;
@@ -93,6 +133,7 @@
         }
         .bigs {
             display: flex;
+            flex-wrap: wrap;
             flex-direction: row;
             justify-content: center;
             align-items: center;
@@ -102,7 +143,6 @@
         .bigs > a {
             width: 123px;
             background-color: white;
-            margin-bottom: 16px;
             display: flex;
             flex-direction: column;
             align-items: flex-start;
@@ -110,14 +150,18 @@
             padding: 20px 16px 16px 16px;
             border-radius: 8px;
         }
+        .bigs > a:hover {
+            cursor: pointer;
+            transform: scale(0.98);
+        }
         .name {
-            font-size: 22px;
+            font-size: 16px;
             font-weight: 700;
             color: #222222;
-            margin-bottom: 45px;
+            margin-bottom: 35px;
         }
         .desc {
-            font-size: 12px;
+            font-size: 10px;
             font-weight: 500;
             color: #555555;
             margin-bottom: 24px;
@@ -131,35 +175,56 @@
             padding: 5px 4px 5px 4px;
         }
     </style>
+    <script>
+        const go = (e) => {
+            // alert('준비중이니 조금만 기다려주세요!')
+            Swal.fire({
+            icon: 'info',                         // Alert 타입
+            text: '준비중이니 조금만 기다려주세요!',  // Alert 내용
+        });
+        }
+    </script>
 </head>
 <body>
     <div class="wrap">
         <div class="pro">
             <div class="headcopy">
                 <h1 class="main">프론트엔드 개발자<br>최지은 입니다.</h1>
-                <p class="sub">UX/UI 구성에 관심이 있는 주니어 프론트엔드 개발자입니다.</p>
+                <p class="sub">사용자 경험에 따른 UX/UI 구성에 관심이 많은 주니어 프론트엔드 개발자입니다.</p>
             </div>
             <div class="profile"></div>
         </div>
         <div class="minis">
-            <a class="tistory" target="_blank" href="https://choijying21.tistory.com/">티스토리        <span style="color:#FFFFFF">></span></a>
+            <a class="tistory" target="_blank" href="https://choijying21.tistory.com/">블로그        <span style="color:#FFFFFF">></span></a>
             <a class="github" target="_blank" href="https://github.com/JIEUN24">깃허브         ></a>
+            <a class="rocket" target="_blank" href="https://www.instagram.com/nueij_ji/">로켓펀치     ></a>
             <a class="instagram" target="_blank" href="https://www.instagram.com/nueij_ji/">인스타그램     ></a>
+            <a class="contect" target="_blank" href="mailto:"pandaa0628@gmail.com"">contect     ></a>
         </div>
-        <div style="color:#FFFFFF;width: 320px;font-size: 14px;margin-bottom: 8px;">저를 소개합니다.</div>
+        <div style="color:#FFFFFF; width: 320px; font-size: 14px; margin-bottom: 8px;">저를 소개합니다.</div>
         <div class="bigs">
-            <a target="_blank" href="https://drive.google.com/file/d/1vKXXHboiF39D8OdandIZRlAVe4ggnONb/view">
-                <div class="name">이력서</div>
-                <div class="desc">데이터에서 문제를 찾고<br>명확한 가설에 집중하는<br>PM입니다.</div>
+            <a target="_blank" href="https://drive.google.com/file/d/1gWl4MSd07RvuMMOT0zszMiKreL1sq69E/view?usp=sharing">
+                <div class="name">이력서(PDF)</div>
+                <div class="desc">사용자 경험에 따른<br>UX/UI에 관심이 많고<br>지속적인 성장을 위해 노력하는<br>프론트엔드 개발자입니다.</div>
                 <div class="btn">다운로드</div>
             </a>
-            <a target="_blank" href="https://drive.google.com/file/d/1vKXXHboiF39D8OdandIZRlAVe4ggnONb/view">
-                <div class="name">포트폴리오</div>
-                <div class="desc">애자일하게 일하며<br>성과를 냈었던 경험을<br>담았습니다.</div>
+            <a target="_blank" onclick="go()">
+                <div class="name">It's Me!! (SITE)</div>
+                <div class="desc">스스로 성장을 위하여<br>공부했던 과정과 기록을<br>저만의 사이트에<br>담았습니다.</div>
+                <div class="btn">바로가기</div>
+            </a>
+            <a target="_blank" href="https://drive.google.com/file/d/15bZfCbPnLcRt8BskqTHIsiiL5B0cWMeS/view?usp=sharing">
+                <div class="name">포트폴리오(PDF)</div>
+                <div class="desc">애자일하게 일하며<br>사용자에게 만족을 주었던<br>프로젝트 성과를<br>담았습니다.</div>
+                <div class="btn">다운로드</div>
+            </a>
+            <a target="_blank" href="https://drive.google.com/file/d/15bZfCbPnLcRt8BskqTHIsiiL5B0cWMeS/view?usp=sharing">
+                <div class="name">포트폴리오(PDF)</div>
+                <div class="desc">애자일하게 일하며<br>사용자에게 만족을 주었던<br>프로젝트 성과를<br>담았습니다.</div>
                 <div class="btn">다운로드</div>
             </a>
         </div>
-        <div style="color:#B1B1B5;font-size: 14px;background-position: center;background-size: cover;position: absolute;bottom: 50px;">@JIEUN</div>
+        <div style="color:#B1B1B5; font-size: 14px; background-position: center; background-size: cover; margin-top: 25px; margin-bottom: 20px;">@JIEUN</div>
     </div>
 </body>
 </html>
